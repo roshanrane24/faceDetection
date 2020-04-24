@@ -13,7 +13,7 @@ while True:
         print("Check Source.")
         break
     image, count = detectFaces(frame, video=True)
-    print(f'/r{count} faces detected')
+    print(f"\r{count} faces detected", end='')
     cv2.imshow("Face detector", image)
 
     key = cv2.waitKey(1) & 0xFF
